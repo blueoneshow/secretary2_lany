@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+        <br>
+        {% for month in months %}
+                {{month.date}}<a href="/diary/{{month.date}}">留言板</a>|<a href="/money/{{month.date}}">帳本</a>
+
+        {% endfor %}
+
+         {% for friend in friends %}
+                <p><a href="{{friend}}">{{friend}}</a></p>
+         {% endfor %}
+{% endblock %}
